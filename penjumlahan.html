@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <form name="formJml" onsubmit="jumlah()">
+            Masukkan bilangan ke-1: <br /> <input type="text" name="nilaisatu"> <br>
+            Masukkan bilangan ke-2: <br /> <input type="text" name="nilaidua"> <br>
+            Tekan tombol ini untuk menjumlahkan: <br /> <input type="Submit" value="Hitung penjumlahan">
+        </form>
+        <script languange="javascript">
+            function jumlah(){
+                nilai1 = document.formJml.nilaisatu.value;
+                nilai2 = document.formJml.nilaidua.value;
+                hasil = parseInt(nilai1) + parseInt(nilai2);
+                document.write("Hasil penjumlahan adalah " + hasil);
+            }
+        </script>
+    </body>
+</html>

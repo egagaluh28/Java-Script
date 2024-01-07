@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script language="javascript">
+      //menampilkan tulisan berwarna
+      document.write(
+        "<FOnt color='blue'>\
+            hanya tulisan merah. </font>"
+        //contoh alert
+      );
+      window.alert("selamat datang");
+      //contoh comfirm
+      var jawaban = window.confirm("apakah anda ingin melanjutkan?");
+      document.write("<br>jawaban anda :" + jawaban + "<br>");
+      //sapaan pengunjung
+      document.write("<br>1. sapaan pengunjung :" + "<br>");
+      var pengunjung = prompt("tulisan anda dibawah", "yu, di sini");
+      document.write("hai" + pengunjung + "gimana kabarnya" + "<br>");
+      //panjangString
+      document.write("<br>2. Panjang String :");
+      var depan = "manajemen";
+      var belakang = "Informatika";
+      nama = depan + belakang;
+      document.write("<br> program :" + nama);
+      document.write("<br> panjang kata :" + nama.length + "<br>");
+      //oprasi matematika
+      document.write("<br>3. oprasi matematika :" + "<br>");
+      document.write("15 + 4 :" + (15 + 4));
+      document.write("<br>");
+      document.write("15 - 4 :" + (15 - 4));
+      document.write("<br>");
+      document.write("15 * 4 :" + 15 * 4);
+      document.write("<br>");
+      document.write("15 / 4 :" + 15 / 4);
+      document.write("<br>");
+      document.write("15 % 4 :" + (15 % 4));
+      document.write("<br>");
+      //inc_decrement
+      document.write("<br>4. Inc dokumen :" + "<br>");
+      a = 3;
+      b = 6 + a++;
+      document.write("1. b= " + b + "<br>");
+      a = 3;
+      b = 6 + ++a;
+      document.write("2. b= " + b + "<br>");
+      a = 3;
+      b = 6 + a--;
+      document.write("3. b= " + b + "<br>");
+      a = 3;
+      b = 6 + --a;
+      document.write("4. b= " + b + "<br>");
+      //konversi
+      document.write("<br>5. konversi :" + "<br>");
+      var x = 7; //numerik
+      var y,
+        z = "19"; //string
+      var lk = "lucky";
+
+      document.write("5 + x = " + (5 + x) + "<br>");
+      document.write("lk + z = " + (lk + z) + "<br>");
+      document.write("lk + x = " + (lk + x) + "<br>");
+      document.write("x + z = " + (x + z) + "<br>");
+      document.write("x + z = " + (parseInt(z) + x) + "<br>");
+      //keliling lingkaran
+      document.write("<br>6. keliling lingkaran :" + "<br>");
+      var r = 10;
+      var n = 3;
+      var keling = 2 * Math.PI * r;
+      var nling = n * keling;
+      document.write("3 x keliling lingkaran = " + nling + "<br>");
+      //tipe data
+      document.write("<br>7. tipe data :" + "<br>");
+      document.write("a. " + typeof "perancangan web" + "<br>");
+      document.write("b. " + typeof 12345 + "<br>");
+      document.write("c. " + typeof true + "<br>");
+      document.write("d. " + typeof false + "<br>");
+      document.write("e. " + typeof window + "<br>");
+      document.write("f. " + typeof document.write + "<br>");
+      //ifelse
+      if (confirm("anda mau masuk ke if?")) {
+        alert("bagus, silahkan masuk");
+      } else {
+        alert("terimakasih sudah menolak");
+      }
+      //pengulangan for
+      document.write("<br>8. pengulangan for :" + "<br>");
+      for (i = 1; i <= 5; i = i + 1) {
+        document.write("Bilangan " + i + "<br>");
+      }
+      //pengulangan while
+      document.write("<br>9. pengulangan while :" + "<br>");
+      iterasi = 5;
+      i = 1;
+      while (i <= iterasi) {
+        document.write("Ini angka " + i + "<br>");
+        i = i + 1;
+      }
+      //tanggal dan waktu
+      document.write("<br>10. tanggal dan waktu :" + "<br>");
+      var waktu = new Date();
+      document.write("Tanggal sekrang: " + waktu.getDate() + "<br />");
+      document.write("Bulan sekarang: " + waktu.getMonth() + "<br />");
+      document.write("Tahun sekarang: " + waktu.getFullYear() + "<br />");
+      document.write("Jam sekarang: " + waktu.getHours() + "<br />");
+      document.write("Menit sekarang: " + waktu.getMinutes() + "<br />");
+      document.write("Detik sekarang: " + waktu.getSeconds() + "<br />");
+
+      //swif case
+      document.write("<br>11. swift case : " + "<br>");
+      function tanya() {
+        var jawab = "";
+        var jawab = prompt("Apakah anda senang membuat website?");
+        var jawab = jawab.toUpperCase();
+        switch (jawab) {
+          case "YA":
+            var tampil = "sama dong :D";
+            break;
+          case "YUP":
+            var tampil = "saya juga :D";
+            break;
+          case "TIDAK":
+            var tampil = "iya ya, bikin suntuk :(";
+            break;
+          case "NGGAK":
+            var tampil = "membosankan :(";
+            break;
+          default:
+            var tampil = "Jawab dong, ya/yup atau tidak/nggak";
+            break;
+        }
+        alert(tampil);
+      }
+    </script>
+    <b> Hobi </b>
+    <form>
+      <input type="button" value="pilihan" onClick="tanya()" />
+    </form>
+  </body>
+</html>
